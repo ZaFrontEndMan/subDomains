@@ -1,0 +1,19 @@
+@mixin smallScreenMedia($color) {
+  @media only screen and (max-width: 768px) {
+    background-image: linear-gradient(to right,
+        rgba($color, 0.9),
+        rgba($color, 0.9)),
+      url("../../public/images/building-1.jpg");
+  }
+}
+
+// light
+.login {
+  background-image: linear-gradient(to right,
+      rgb(21 170 190 / 78%) 0%,
+      rgb(21 170 190 / 78%) 100%,
+      transparent 10%),
+    url("../../public/images/building-1.jpg");
+  @include smallScreenMedia(rgb(21 170 190 / 78%));
+
+}
